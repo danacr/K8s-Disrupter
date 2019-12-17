@@ -9,7 +9,7 @@ export default class App extends Component {
   id = Constants.installationId;
   async componentWillMount() {
     ShakeEventExpo.addListener(() => {
-      fetch("https://k8s-disrupter.scapp.io/", {
+      fetch("https://disrupt.mad.md/", {
         method: "POST",
         body: JSON.stringify({ Name: this.name, ID: this.id })
       }).catch();
