@@ -19,7 +19,8 @@
     "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.mad.md.k8s.disrupter"
+      "bundleIdentifier": "com.mad.md.k8s.disrupter",
+      "buildNumber": "2"
     },
     "android": {
       "package": "com.mad.md.k8s.disrupter"
