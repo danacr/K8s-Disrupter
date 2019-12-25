@@ -24,7 +24,8 @@
     },
     "android": {
       "package": "com.mad.md.k8s.disrupter",
-      "permissions": ["VIBRATE"]
+      "permissions": ["VIBRATE"],
+      "versionCode": 3
     }
   }
 }
