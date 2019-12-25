@@ -31,7 +31,7 @@ export default class App extends Component {
 
     Animated.timing(this.state.progress, {
       toValue: 1,
-      duration: 2 * 1000,
+      duration: 1000,
       easing: Easing.linear
     }).start();
   }
