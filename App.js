@@ -1,12 +1,9 @@
 import React, { Component } from "react";
 import {
-  Alert,
   Animated,
-  Button,
   Easing,
   StyleSheet,
   Text,
-  TouchableHighlight,
   View,
   Vibration
 } from "react-native";
@@ -34,7 +31,7 @@ export default class App extends Component {
 
     Animated.timing(this.state.progress, {
       toValue: 1,
-      duration: 1200,
+      duration: 2 * 1000,
       easing: Easing.linear
     }).start();
   }
@@ -54,6 +51,16 @@ export default class App extends Component {
   render() {
     return (
       <Grid style={{ backgroundColor: "black" }}>
+        {/* <Separator /> */}
+        <Separator />
+        <View style={{ flex: 1, alignItems: "center" }}>
+          <LottieView
+            resizeMode={"cover"}
+            key={1}
+            source={require("./7598-particle-explosion.json")}
+            progress={this.state.progress}
+          />
+        </View>
         <Row style={{ alignItems: "center" }}>
           <Col style={{ alignItems: "center" }}>
             <Text style={{ color: "#fff", fontSize: 32 }}>Hi {this.name}</Text>
@@ -82,14 +89,7 @@ export default class App extends Component {
             </AwesomeButton>
           </Col>
         </Row>
-        <View style={{ flex: 1, alignItems: "center" }}>
-          <LottieView
-            resizeMode={"cover"}
-            key={1}
-            source={require("./7598-particle-explosion.json")}
-            progress={this.state.progress}
-          />
-        </View>
+        <Separator />
       </Grid>
     );
   }
@@ -97,7 +97,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   separator: {
-    marginVertical: 48,
+    marginVertical: 32,
     borderBottomColor: "#000000",
     borderBottomWidth: StyleSheet.hairlineWidth
   }
